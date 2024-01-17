@@ -1,22 +1,20 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const sessionSchema = new mongoose.Schema({
-    user:{
-        type:String,
+const sessionSchema = new mongoose.Schema(
+  {
+    user: {
+      type: String,
     },
-    logoutTime:{
-        type: Number
+    sessionStart: {
+      type: Number,
     },
-    priority:{
-        type:Number
+    sessionEnd: {
+      type: Number,
     },
-})
+  },
+  { timestamps: true }
+);
 
-
-
-
-
-
-const Session = mongoose.model('Session', sessionSchema);
+const Session = mongoose.model("Session", sessionSchema);
 
 module.exports = Session;
