@@ -53,7 +53,7 @@ module.exports.loginUser = async (req, res) => {
     if (!user) {
       return res.json({
         status: "failed",
-        message: "No User found please login",
+        message: "No User found please signup",
       });
     }
 
